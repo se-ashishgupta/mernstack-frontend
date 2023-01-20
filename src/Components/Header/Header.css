@@ -1,0 +1,12 @@
+.header {
+  background-color: rgb(70, 72, 73);
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.header > a {
+  color: white;
+  padding: 0.5rem;
+  text-decoration: none;
+}
