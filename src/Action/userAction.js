@@ -7,7 +7,7 @@ export const loginUser = (email, password) => async (dispatch) => {
       type: "LoginRequest",
     });
     const { data } = await axios.post(
-      `${server}/api/v1/login`,
+      `${server}/login`,
       { email, password },
       {
         headers: {
@@ -34,7 +34,7 @@ export const loadUser = () => async (dispatch) => {
       type: "LoadUserRequest",
     });
 
-    const { data } = await axios.get(`${server}/api/v1/me`, {
+    const { data } = await axios.get(`${server}/me`, {
       withCredentials: true,
     });
     dispatch({
@@ -55,9 +55,12 @@ export const logoutUser = () => async (dispatch) => {
       type: "LogoutUserRequest",
     });
 
-    await axios.get(`${server}/api/v1/logout`);
+    await axios.get(`${server}/logout`, {
+      withCredentials: true,
+    });
     dispatch({
       type: "LogoutUserSuccess",
+      payload: data.message,
     });
   } catch (error) {
     dispatch({

@@ -10,4 +10,4 @@ const store = configureStore({
 export default store;
 
 // export const server = "http://localhost:8000";
-export const server = "https://mernstack-ueiy.onrender.com";
+export const server = "https://mernstack-ueiy.onrender.com/api/v1";
