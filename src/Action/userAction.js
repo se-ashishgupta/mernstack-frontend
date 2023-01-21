@@ -55,7 +55,7 @@ export const logoutUser = () => async (dispatch) => {
       type: "LogoutUserRequest",
     });
 
-    await axios.get(`${server}/logout`, {
+    const { data } = await axios.get(`${server}/logout`, {
       withCredentials: true,
     });
     dispatch({
