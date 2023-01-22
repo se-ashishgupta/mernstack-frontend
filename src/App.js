@@ -5,7 +5,7 @@ import Home from "./Components/Home/Home";
 import Login from "./Components/Login/Login";
 import { useDispatch, useSelector } from "react-redux";
 import { loadUser } from "./Action/userAction";
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import { HashRouter as Router, Route, Routes } from "react-router-dom";
 
 const App = () => {
   const dispatch = useDispatch();
