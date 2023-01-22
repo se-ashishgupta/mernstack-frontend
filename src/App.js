@@ -6,7 +6,7 @@ import Login from "./Components/Login/Login";
 import { useDispatch, useSelector } from "react-redux";
 import { loadUser } from "./Action/userAction";
 import {
-  BrowserRouter as Router,
+  HashRouter as Router,
   Route,
   Routes,
   HashRouter,
